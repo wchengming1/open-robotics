@@ -1,0 +1,26 @@
+{
+  "robot": "original biped, 14 HD1910 servos, no 2804 wheels",
+  "control_hz": 50,
+  "policies": [
+    {
+      "role": "walk",
+      "onnx": "models\\hd1910_velocity_final.onnx",
+      "checkpoint": "logs\\rsl_rl\\microduck_hd1910_velocity\\2026-10-20_19-52-31_hd1910_resume_20261020_195213\\model_4999.pt",
+      "sha256": "6f719da6c2afb5ddccfc2a2736304dfc7fc349c9585f315ad09d224973f895f0",
+      "max_onnx_checkpoint_error": 7.62939453125e-06,
+      "observation_dim": 61,
+      "action_dim": 14,
+      "normalizer_baked": true
+    },
+    {
+      "role": "standup",
+      "onnx": "models\\hd1910_standup_best.onnx",
+      "checkpoint": "logs\\rsl_rl\\microduck_hd1910_stand_teacher\\2026-10-25_13-07-42_hd1910_teacher_resume_20261025_130719\\model_5999.pt",
+      "sha256": "dd29ccd6f563562c5df1d155b7c25613a8d516fd54302d0e4def0e785550769b",
+      "max_onnx_checkpoint_error": 4.291534423828125e-06,
+      "observation_dim": 61,
+      "action_dim": 14,
+      "normalizer_baked": true
+    }
+  ]
+}
